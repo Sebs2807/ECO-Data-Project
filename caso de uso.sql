@@ -17,7 +17,7 @@ INSERT INTO parques_naturales(nombre, hora_apertura, hora_cierre, CANT_TRABAJADO
 ('Parque Nacional Natural La Paya', TO_TIMESTAMP('08:30:00', 'HH24:MI:SS'), TO_TIMESTAMP('16:30:00', 'HH24:MI:SS'), 130, 320, 500, 'ABIERTO');
 
 INSERT INTO parques_naturales(nombre, hora_apertura, hora_cierre, CANT_TRABAJADORES, VALOR_INGRESO_ADULTOS, VALOR_INGRESO_NINOS, ESTADO) VALUES
-('Parque Nacional Natural Cahuinarí', TO_TIMESTAMP('09:00:00', 'HH24:MI:SS'), TO_TIMESTAMP('17:30:00', 'HH24:MI:SS'), 90, 260, 420, 'ABIERTO');
+('Parque Nacional Natural CahuinarÃ­', TO_TIMESTAMP('09:00:00', 'HH24:MI:SS'), TO_TIMESTAMP('17:30:00', 'HH24:MI:SS'), 90, 260, 420, 'ABIERTO');
 
 SELECT * FROM PARQUES_NATURALES
 WHERE CODIGO > 1000;
@@ -86,15 +86,15 @@ INSERT INTO departamentos(nombre,latitud,longitud) VALUES
 ('Antioquia', 1.5, 3.0);
 
 
---senderismo y observación de aves
+--senderismo y observaciÃ³n de aves
 
 INSERT INTO ACTIVIDADES_PERMITIDAS(DESCRIPCION_ACTIVIDAD,TIPO_DE_ACTIVIDAD) VALUES
 ('Actividad recreativa y deportiva que implica caminar', 'SENDERISMO TERRESTRE'); -- 1001
 INSERT INTO ACTIVIDADES_PERMITIDAS(DESCRIPCION_ACTIVIDAD,TIPO_DE_ACTIVIDAD) VALUES
-('Actividad fascinante que implica la identificación y observación de aves', 'OBSERVACION AVES'); -- 1002
+('Actividad fascinante que implica la identificaciÃ³n y observaciÃ³n de aves', 'OBSERVACION AVES'); -- 1002
 
 
-SELECT * FROM ACTIVIDADES_PERMITIDAS WHERE DESCRIPCION_ACTIVIDAD = 'Actividad fascinante que implica la identificación y observación de aves';
+SELECT * FROM ACTIVIDADES_PERMITIDAS WHERE DESCRIPCION_ACTIVIDAD = 'Actividad fascinante que implica la identificaciÃ³n y observaciÃ³n de aves';
 
 INSERT INTO ACTIVIDADES_POR_PARQUE(ID_PARQUE,ID_ACTIVIDAD) VALUES
 (1001, '1001');
@@ -149,7 +149,7 @@ INSERT INTO  SERVICIOS(ID_ACTIVIDAD,DESCRIPCION,TIPO_SERVICIO,RESPONSABLE,MAYOR_
 (1001, 'Actividad recreativa', 'ACOMPANIAMENTO', 'Marta Fernandez', 1, 26, 38);
 
 INSERT INTO  SERVICIOS(ID_ACTIVIDAD,DESCRIPCION,TIPO_SERVICIO,RESPONSABLE,MAYOR_DE_EDAD,PRECIO_DIA,PRECIO_PERSONA) VALUES
-(1002, 'Identificación y observación de aves', 'ACOMPANIAMENTO', 'Dilan Cruz', 1, 24, 10);
+(1002, 'IdentificaciÃ³n y observaciÃ³n de aves', 'ACOMPANIAMENTO', 'Dilan Cruz', 1, 24, 10);
 
 
 begin
